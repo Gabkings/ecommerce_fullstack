@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-
+import django_heroku
 from corsheaders.defaults import default_methods
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -151,3 +151,6 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = "user.CustomUser"
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())

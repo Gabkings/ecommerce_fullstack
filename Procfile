@@ -1,0 +1,1 @@
+web: gunicorn lcodev.wsgi:application --log-file -
